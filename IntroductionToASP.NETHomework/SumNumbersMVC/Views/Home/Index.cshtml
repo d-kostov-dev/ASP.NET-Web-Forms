@@ -1,0 +1,20 @@
+﻿@model SumNumbersMVC.Models.SumNumbersModel
+
+@{
+    ViewBag.Title = "Sum Numbers Home Page";
+}
+
+<div>
+    <h1>Sum Numbers</h1>
+    <form action="/Home/SumNumbers" method="post">
+        <div class="control-group">
+            @Html.TextBoxFor(m => m.NumberOne)
+        </div>
+        <div class="control-group">
+            @Html.TextBoxFor(m => m.NumberTwo)
+        </div>
+        <button type="submit">Sum Numbers</button>
+    </form>
+    <hr />
+    <h1> @ViewBag.Result</h1>
+</div>
