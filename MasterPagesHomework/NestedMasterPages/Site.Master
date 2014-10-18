@@ -1,0 +1,38 @@
+﻿<%@ Master 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="Site.master.cs" 
+    Inherits="NestedMasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Master Pages Homework</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Master Pages Homework" />
+</head>
+
+<body>
+    <form id="homePage" runat="server">
+        <asp:ContentPlaceHolder ID="headerContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="pageContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div id="footer">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted text-center">Made By <a href="https://telerikacademy.com/">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="NestedMasterPages.Countries.USA.Home" %>
+
+<asp:Content ID="headerContent" ContentPlaceHolderID="headerContent" runat="server">
+    <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Country Info.Com</a>
+                </div>
+            </div>
+        </div>
+</asp:Content>
+
+<asp:Content ID="pageContent" ContentPlaceHolderID="pageContent" runat="server">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Menu</h3>
+                    <div class="bs-component">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="USAHome.aspx">Home</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="USAAbout.aspx">About Us</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="USAContacts.aspx">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+</asp:Content>
