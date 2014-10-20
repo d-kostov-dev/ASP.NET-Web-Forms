@@ -1,0 +1,78 @@
+﻿<%@ Master 
+    Language="C#" 
+    AutoEventWireup="true" 
+    CodeBehind="Site.master.cs" 
+    Inherits="DataBindingHomeworkTasks.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Data Binding Homework - Home Page</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/app.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Data Binding Homework" />
+</head>
+
+<body>
+    <form id="homePage" runat="server">
+
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Menu</h3>
+                    <div class="bs-component">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="/">Home</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/CarsSearch/CarsSearch.aspx">1. Cars Search</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/EmployeesDetailsView/EmployeesList.aspx">2. Northwind Employees DetailsView</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/EmployeesFormView/EmployeesList.aspx">4. Northwind Employees FormView</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/Repeater/EmployeesList.aspx">5. Repeater</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/ListView/EmployeesList.aspx">6. ListView</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted text-center">Made By <a href="https://telerikacademy.com/">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
