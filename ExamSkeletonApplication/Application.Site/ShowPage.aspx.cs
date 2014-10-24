@@ -29,7 +29,7 @@ namespace Application.Site
 
                 this.Page.Title = currentPage.Title;
                 this.pageTitle.InnerText = currentPage.Title;
-                this.pageContent.InnerText = currentPage.Content;
+                this.pageContent.InnerHtml = currentPage.Content;
             }
         }
     }

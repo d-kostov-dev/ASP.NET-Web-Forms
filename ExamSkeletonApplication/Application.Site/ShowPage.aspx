@@ -2,5 +2,5 @@
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <h3 id="pageTitle" runat="server"></h3>
-    <div class="jumbotron" id="pageContent" runat="server"></div>
+    <div class="bs-component" id="pageContent" runat="server"></div>
 </asp:Content>
