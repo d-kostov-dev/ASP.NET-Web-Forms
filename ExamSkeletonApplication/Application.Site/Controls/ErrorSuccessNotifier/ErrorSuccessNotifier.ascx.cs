@@ -14,7 +14,7 @@ namespace ErrorHandlerControl
 		Success,
 		Info,
 		Warning,
-		Error
+        Danger
 	}
 
 	public class NotificationMessage
@@ -112,7 +112,7 @@ namespace ErrorHandlerControl
             AddMessage(new NotificationMessage()
             {
                 Text = msg,
-                Type = MessageType.Error,
+                Type = MessageType.Danger,
                 AutoHide = false
             });
         }
@@ -157,7 +157,7 @@ namespace ErrorHandlerControl
                 foreach (var msg in NotificationMessages)
                 {
                     Panel msgPanel = new Panel();
-                    msgPanel.CssClass = "alert alert-danger";
+                    msgPanel.CssClass = "alert alert-" + msg.Type.ToString().ToLowerInvariant();
 
                     if (msg.AutoHide)
                     {

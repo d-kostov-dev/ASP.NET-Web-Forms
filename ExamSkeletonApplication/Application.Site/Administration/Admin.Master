@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Car Service Records - Admin Panel</title>
+    <title>Exam Skeleton - Admin Panel</title>
     <link href="/administration/content/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/administration/content/css/metisMenu.min.css" rel="stylesheet" />
     <link href="/administration/content/css/sb-admin-2.css" rel="stylesheet" />

@@ -34,7 +34,21 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Administrator">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="~/Administration">Admin Panel</a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                                <asp:RoleGroup Roles="Default">
+                                    <ContentTemplate>
+                                        <li><a runat="server" href="#">Default User Page</a></li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                        <%--<li><a runat="server" href="~/">Home</a></li>--%>
                     </ul>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
@@ -69,6 +83,14 @@
                         <p class="text-muted text-center">Made By <a href="#">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
                     </div>
                     <div class="col-md-6">
+                        <asp:Repeater 
+                            ID="PagesList" 
+                            runat="server" 
+                            ItemType="Application.Models.SitePage">
+                            <ItemTemplate>
+                                <a href="ShowPage.aspx?pageId=<%#: Item.Id %>"><%#: Item.Title %></a> | 
+                            </ItemTemplate>
+                        </asp:Repeater>
                     </div>
                 </div>
             </div>

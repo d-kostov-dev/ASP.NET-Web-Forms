@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Application.Site {
+namespace Application.Site.Administration.SitePages {
     
     
-    public partial class SiteMaster {
+    public partial class List {
         
         /// <summary>
-        /// MainContent control.
+        /// ItemsList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
-        
-        /// <summary>
-        /// PagesList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater PagesList;
+        protected global::System.Web.UI.WebControls.ListView ItemsList;
     }
 }

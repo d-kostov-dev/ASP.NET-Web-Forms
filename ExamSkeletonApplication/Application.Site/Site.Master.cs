@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Application.Data;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
+using System.Linq;
 using System.Web.UI.WebControls;
 
 namespace Application.Site
@@ -14,9 +16,11 @@ namespace Application.Site
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        private DataProvider Data;
 
         protected void Page_Init(object sender, EventArgs e)
         {
+            this.Data = new DataProvider();
             // The code below helps to protect against XSRF attacks
             var requestCookie = Request.Cookies[AntiXsrfTokenKey];
             Guid requestCookieGuidValue;
@@ -54,6 +58,9 @@ namespace Application.Site
                 // Set Anti-XSRF token
                 ViewState[AntiXsrfTokenKey] = Page.ViewStateUserKey;
                 ViewState[AntiXsrfUserNameKey] = Context.User.Identity.Name ?? String.Empty;
+
+                this.PagesList.DataSource = this.Data.SitePages.All().Where(x => x.IsVisible == true).ToList();
+                this.PagesList.DataBind();
             }
             else
             {

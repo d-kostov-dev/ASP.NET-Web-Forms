@@ -83,6 +83,7 @@
                     ShowFirstPageButton="true"
                     ShowNextPageButton="false" 
                     ShowPreviousPageButton="false" />
+
                 <asp:NumericPagerField />
 
                 <asp:NextPreviousPagerField 

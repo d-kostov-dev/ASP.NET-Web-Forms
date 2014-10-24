@@ -7,12 +7,11 @@
     {
         public int Id { get; set; }
 
-        [MaxLength(100)]
+        [MaxLength(200)]
         public string Title { get; set; }
 
+        [MinLength(100)]
         public string Content { get; set; }
-
-        public DateTime DateCreated { get; set; }
 
         public bool IsVisible { get; set; }
     }
