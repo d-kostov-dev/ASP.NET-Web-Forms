@@ -1,0 +1,4 @@
+User with more properties. (age, photo etc.)
+Search Form
+Categories
+SitePages
