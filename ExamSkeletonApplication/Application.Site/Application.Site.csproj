@@ -154,10 +154,25 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\ResetPassword.aspx" />
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
+    <Content Include="Administration\content\css\bootstrap.min.css" />
+    <Content Include="Administration\content\css\metisMenu.min.css" />
+    <Content Include="Administration\content\css\sb-admin-2.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Administration\content\js\bootstrap.min.js" />
+    <Content Include="Administration\content\js\jquery-1.11.0.js" />
+    <Content Include="Administration\content\js\plugins\metisMenu\metisMenu.min.js" />
+    <Content Include="Administration\content\js\sb-admin-2.js" />
+    <Content Include="Administration\Default.aspx" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\favicon.ico" />
+    <Content Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx" />
+    <Content Include="Controls\ErrorSuccessNotifier\Scripts\ErrorSuccessNotifier.js" />
+    <Content Include="Controls\ErrorSuccessNotifier\Scripts\jquery-1.3.2.js" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -167,6 +182,40 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="Web.config" />
+    <Content Include="Administration\Admin.Master" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Administration\content\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\bordered-pulled.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\core.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\fixed-width.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\font-awesome.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\icons.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\larger.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\list.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\mixins.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\path.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\rotated-flipped.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\spinning.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\stacked.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\less\variables.less" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\font-awesome.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_bordered-pulled.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_core.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_fixed-width.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_icons.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_larger.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_list.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_mixins.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_path.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_rotated-flipped.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_spinning.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_stacked.scss" />
+    <Content Include="Administration\content\font-awesome-4.1.0\scss\_variables.scss" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Administration\content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -238,10 +287,31 @@
     <Compile Include="Account\ResetPasswordConfirmation.aspx.designer.cs">
       <DependentUpon>ResetPasswordConfirmation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Administration\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\IdentityHelper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx.cs">
+      <DependentUpon>ErrorSuccessNotifier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ErrorSuccessNotifier\ErrorSuccessNotifier.ascx.designer.cs">
+      <DependentUpon>ErrorSuccessNotifier.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -2,3 +2,4 @@ User with more properties. (age, photo etc.)
 Search Form
 Categories
 SitePages
+GLobal Error Handling for Front Page
