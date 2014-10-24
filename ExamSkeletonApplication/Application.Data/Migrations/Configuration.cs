@@ -36,11 +36,11 @@ namespace Application.Data.Migrations
                 manager.Create(role);
             }
 
-            if (!context.Users.Any(u => u.UserName == "admin@abv.com"))
+            if (!context.Users.Any(u => u.UserName == "admin@abv.bg"))
             {
                 var store = new UserStore<User>(context);
                 var manager = new UserManager<User>(store);
-                var user = new User { UserName = "admin@abv.com" };
+                var user = new User { UserName = "admin@abv.bg", Email = "admin@abv.bg" };
 
                 manager.Create(user, "123456");
                 manager.AddToRole(user.Id, "Administrator");
@@ -50,7 +50,7 @@ namespace Application.Data.Migrations
             {
                 var store = new UserStore<User>(context);
                 var manager = new UserManager<User>(store);
-                var user = new User { UserName = "user@abv.bg" };
+                var user = new User { UserName = "user@abv.bg", Email = "user@abv.bg" };
 
                 manager.Create(user, "123456");
                 manager.AddToRole(user.Id, "Default");
