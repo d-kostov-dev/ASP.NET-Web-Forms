@@ -1,5 +1,7 @@
 User with more properties. (age, photo etc.)
 Search Form
 Categories
-SitePages
 GLobal Error Handling for Front Page
+Prepare the using for .Include - Linq
+Prepare the usings for get user id
+

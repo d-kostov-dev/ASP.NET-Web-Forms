@@ -3,7 +3,6 @@
 <%--<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>--%>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-<div class="row">
 <div class="col-md-3"></div>
 <div class="col-md-6">
     <section id="loginForm">
@@ -47,8 +46,10 @@
                     </div>--%>
 
                     <div class="form-group">
-                        <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-block btn-primary" />
-                        <asp:HyperLink runat="server" CssClass="btn btn-xs btn-block btn-default" ID="RegisterHyperLink" ViewStateMode="Disabled">Register</asp:HyperLink>
+                        <div class="col-md-12">
+                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-block btn-primary" />
+                            <asp:HyperLink runat="server" CssClass="btn btn-xs btn-block btn-default" ID="RegisterHyperLink" ViewStateMode="Disabled">Register</asp:HyperLink>
+                        </div>
                     </div>
 
                 </fieldset>
@@ -64,9 +65,8 @@
 </div>
 
 <%--        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>--%>
-    </div>
+        <section id="socialLoginForm">
+            <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
+        </section>
+    </div>--%>
 </asp:Content>

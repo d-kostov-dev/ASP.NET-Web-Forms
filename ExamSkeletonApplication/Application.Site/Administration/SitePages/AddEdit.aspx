@@ -56,6 +56,7 @@
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
                                 <asp:Button ID="ButtonSubmit" runat="server" class="btn btn-primary" Text="Submit" OnClick="ButtonSubmit_Click" />
+                                <a href="List.aspx" class="btn btn-default" role="button">Cancel</a>
                             </div>
                         </div>
                     </fieldset>
