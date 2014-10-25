@@ -1,0 +1,71 @@
+﻿<%@ Master
+    Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="HomeworkTasks.Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>Sitemap Homework - Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="State Homework" />
+
+    <link href="/content/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="homePage" runat="server">
+
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Home</a>
+                    <asp:Menu 
+                        ID="NavigationMenu" 
+                        runat="server" 
+                        SkipLinkText=""
+                        EnableViewState="True" 
+                        IncludeStyleBlock="False" 
+                        Orientation="Horizontal" 
+                        DataSourceID="SiteMapDataSource" 
+                        StaticDisplayLevels="2">
+
+                        <DynamicMenuStyle CssClass="dropdown-menu" />
+
+                        <StaticMenuStyle CssClass="nav navbar-nav"/>
+                    </asp:Menu>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="bs-component">
+                <asp:SiteMapPath class="breadcrumb" ID="SiteMapPathBreadcrump" runat="server" />
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted text-center">Made By <a href="https://telerikacademy.com/">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" />
+</body>
+</html>
