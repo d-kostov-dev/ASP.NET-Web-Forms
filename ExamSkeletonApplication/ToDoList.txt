@@ -1,6 +1,7 @@
 User with more properties. (age, photo etc.)
 Search Form
 Categories
+SubCategories (recursively)
 Global Error Handling for the Front Page
 Prepare the using for .Include - Linq
 Prepare the usings for get user id (or make it a userIdProvider)
@@ -17,3 +18,4 @@ Refactor seeding (own classes)
 Confirmation pop-up design
 Page Size Select
 Prepare View Models
+Check if file already exists
