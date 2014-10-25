@@ -1,7 +1,19 @@
 User with more properties. (age, photo etc.)
 Search Form
 Categories
-GLobal Error Handling for Front Page
+Global Error Handling for the Front Page
 Prepare the using for .Include - Linq
-Prepare the usings for get user id
-
+Prepare the usings for get user id (or make it a userIdProvider)
+Prepare enumerations to list func
+StyleCop
+Rename Admin Panel Title
+Fix Pager Count Bug
+Handle Escaping
+Implement Ninject
+Complete the FAQ
+Make SitePages files Easier for copy/paste (generic names, namespace, html formating)
+Try to make a generic list page and inherit it.
+Refactor seeding (own classes)
+Confirmation pop-up design
+Page Size Select
+Prepare View Models
