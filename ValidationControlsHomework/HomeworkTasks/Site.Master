@@ -1,0 +1,57 @@
+﻿<%@ Master
+    Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Site.Master.cs"
+    Inherits="HomeworkTasks.Index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title>State Homework - Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="State Homework" />
+
+    <link href="/content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/content/css/site.css" rel="stylesheet" />
+</head>
+
+<body>
+    <form id="homePage" runat="server">
+
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Home</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="/Login.aspx">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <asp:ContentPlaceHolder ID="mainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div class="container">
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted text-center">Made By <a href="https://telerikacademy.com/">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
