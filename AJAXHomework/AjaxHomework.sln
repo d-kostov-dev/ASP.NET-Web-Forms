@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeesAndOrders", "AjaxHomeworkTasks\EmployeesAndOrders.csproj", "{8E68E828-DEC7-4972-958B-36F4B0160632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindData", "NorthwindData\NorthwindData.csproj", "{11DFA225-BF65-41BF-A85C-2769BF498307}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxChat", "AjaxChat\AjaxChat.csproj", "{F5358145-B854-44C7-86C4-0FE0EE9132D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoAlbum", "PhotoAlbum\PhotoAlbum.csproj", "{57E54877-AD22-4632-86AC-C04EF8CCC7A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E68E828-DEC7-4972-958B-36F4B0160632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E68E828-DEC7-4972-958B-36F4B0160632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E68E828-DEC7-4972-958B-36F4B0160632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E68E828-DEC7-4972-958B-36F4B0160632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DFA225-BF65-41BF-A85C-2769BF498307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DFA225-BF65-41BF-A85C-2769BF498307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DFA225-BF65-41BF-A85C-2769BF498307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DFA225-BF65-41BF-A85C-2769BF498307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5358145-B854-44C7-86C4-0FE0EE9132D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5358145-B854-44C7-86C4-0FE0EE9132D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5358145-B854-44C7-86C4-0FE0EE9132D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5358145-B854-44C7-86C4-0FE0EE9132D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E54877-AD22-4632-86AC-C04EF8CCC7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E54877-AD22-4632-86AC-C04EF8CCC7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E54877-AD22-4632-86AC-C04EF8CCC7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E54877-AD22-4632-86AC-C04EF8CCC7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
