@@ -3,8 +3,7 @@
 <%--<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>--%>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-<div class="col-md-3"></div>
-<div class="col-md-6">
+<div class="col-md-offset-3 col-md-6">
     <section id="loginForm">
         <div class="well bs-component">
             <div class="form-horizontal">
@@ -61,7 +60,6 @@
             --%>
         </p>
     </section>
-    <div class="col-md-3"></div>
 </div>
 
 <%--        <div class="col-md-4">

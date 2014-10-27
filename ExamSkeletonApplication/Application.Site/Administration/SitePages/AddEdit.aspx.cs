@@ -14,7 +14,7 @@
         private int itemId;
         private DataProvider data;
 
-        protected void Page_Init(object sender, EventArgs e)
+        public AddEdit()
         {
             data = new DataProvider();
         }

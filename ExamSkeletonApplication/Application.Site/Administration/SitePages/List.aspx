@@ -1,9 +1,17 @@
-﻿<%@ Page Title="Site Pages List" Language="C#" MasterPageFile="~/Administration/Admin.Master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="Application.Site.Administration.SitePages.List" %>
+﻿<%@ Page 
+    Title="Items List" 
+    Language="C#" 
+    MasterPageFile="~/Administration/Admin.Master" 
+    AutoEventWireup="true" 
+    CodeBehind="List.aspx.cs" 
+    Inherits="Application.Site.Administration.SitePages.List" %>
 
 <asp:Content ID="AdminContent" ContentPlaceHolderID="AdminContent" runat="server">
     <h3>Site Pages List</h3>
-    <a href="AddEdit.aspx" class="btn btn-primary" role="button">Add New Page</a>
+    <a href="AddEdit.aspx" class="btn btn-primary" role="button">Add New</a>
+
     <hr />
+
     <asp:ListView 
         ID="ItemsList"
         ItemPlaceholderID="ItemPlace"
@@ -11,6 +19,7 @@
         SelectMethod="GetItems"
         ItemType="Application.Models.SitePage">
 
+        <%--Layout Template--%>
         <LayoutTemplate>
             <table class="table table-striped table-bordered table-hover">
                 <tr runat="server">
@@ -53,8 +62,10 @@
                     </Fields>
                 </asp:DataPager>
             </div>
+
         </LayoutTemplate>
 
+        <%--Item Template--%>
         <ItemTemplate>
             <tr runat="server">
             <td>
@@ -79,5 +90,6 @@
             </td>
             </tr>
         </ItemTemplate>
+
     </asp:ListView>     
 </asp:Content>

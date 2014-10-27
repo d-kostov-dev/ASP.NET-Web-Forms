@@ -27,3 +27,14 @@ input[type="email"] {
         padding: 0;
     }
 }
+
+
+a.list-group-item {
+    color: #008cba;
+    font-size:13px;
+}
+
+a.list-group-item:hover, a.list-group-item:focus{
+    color: #008cba;
+    font-size:15px;
+}

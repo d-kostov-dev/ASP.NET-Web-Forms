@@ -12,6 +12,14 @@ namespace Application.Site.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                if (Request.IsAuthenticated)
+                {
+                    Response.Redirect("~/Unauthorized.aspx");
+                }
+            }
+
             RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             // ForgotPasswordHyperLink.NavigateUrl = "Forgot";

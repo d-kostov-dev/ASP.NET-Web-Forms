@@ -2,24 +2,27 @@ User with more properties. (age, photo etc.)
 Search Form
 Categories
 SubCategories (recursively)
-Global Error Handling for the Front Page
 Prepare the using for .Include - Linq
 Prepare the usings for get user id (or make it a userIdProvider)
 Prepare enumerations to list func
 StyleCop
-Rename Admin Panel Title
-Fix Pager Count Bug
-Handle Escaping
 Implement Ninject
 Complete the FAQ
-Make SitePages files Easier for copy/paste (generic names, namespace, html formating)
 Try to make a generic list page and inherit it.
-Refactor seeding (own classes)
 Confirmation pop-up design
 Page Size Select
 Prepare View Models
 Check if file already exists
 Block pages for given roles
 List site pages with user controller
-Attach other models to the user!
-Add Unauthorized Page
+Attach other models to the user
+Make all possible links to asp:hyperlink
+Upload image with random string name (radnom stuff generator class)
+Make profile page and edit profile page.
+
+*DONE* - Public part global error handling.
+*DONE* - Don't show pagination when items less than one page.
+*DONE* - Handle HTML in the input fields.
+*DONE* - Refactor the seeding method. Separate to different seed classes.
+*DONE* - Add Unauthorized/Access Denied Page.
+*DONE* - Use constructors instead of Page_Init. Easyer to implement Ninject later.

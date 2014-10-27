@@ -13,6 +13,11 @@
     {
         private DataProvider data;
 
+        public List()
+        {
+            data = new DataProvider();
+        }
+
         public IQueryable<SitePage> GetItems()
         {
             return data.SitePages.All().OrderBy(x => x.Id);
@@ -32,14 +37,12 @@
             Response.Redirect(Request.RawUrl);
         }
 
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            data = new DataProvider();
-        }
-
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            ShowPager();
+            if (this.GetItems().Count() > 0)
+            {
+                ShowPager();
+            }
         }
 
         private void ShowPager()

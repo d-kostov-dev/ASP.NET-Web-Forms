@@ -1,5 +1,5 @@
 ﻿<%@ Page 
-    Title="" 
+    Title="Add or Edit Item" 
     Language="C#" 
     MasterPageFile="~/Administration/Admin.Master" 
     AutoEventWireup="true" 
@@ -8,12 +8,16 @@
 
 <asp:Content ID="AdminContent" ContentPlaceHolderID="AdminContent" runat="server">
     <div class="col-md-8">
-        <h3>Manage Site Pages</h3>
+        <h3>Manage Item</h3>
+
         <hr />
+
         <div class="panel panel-default">
+
             <div class="panel-heading">
-                Manage Pages
+                Manage Item
             </div>
+
             <div class="panel-body">
                 <div class="form-horizontal" id="mangeItemForm" runat="server">
                     <fieldset>
@@ -60,8 +64,9 @@
                             </div>
                         </div>
                     </fieldset>
-                </div>
-            </div>
+                </div><%--Form Div End--%>
+            </div><%--Panel Body End--%>
+
         </div>
     </div>
 </asp:Content>
