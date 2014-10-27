@@ -21,3 +21,5 @@ Prepare View Models
 Check if file already exists
 Block pages for given roles
 List site pages with user controller
+Attach other models to the user!
+Add Unauthorized Page
