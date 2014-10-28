@@ -42,6 +42,11 @@
         {
             get { return this.GetRepository<Town>(); }
         }
+
+        public IRepository<Category> Categories
+        {
+            get { return this.GetRepository<Category>(); }
+        }
        
         public int SaveChanges()
         {

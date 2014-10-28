@@ -47,7 +47,19 @@
                         </li>
 
                         <li>
-                            <a href="/administration/SitePages/List.aspx"><i class="fa fa-folder-open-o fa-fw"></i> Pages</a>
+                            <a href="/Administration/Countries/List.aspx"><i class="fa fa-gear fa-fw"></i> Countries</a>
+                        </li>
+
+                        <li>
+                            <a href="/Administration/Towns/List.aspx"><i class="fa fa-gear fa-fw"></i> Towns</a>
+                        </li>
+
+                        <li>
+                            <a href="/Administration/Categories/List.aspx"><i class="fa fa-gear fa-fw"></i> Categories</a>
+                        </li>
+
+                        <li>
+                            <a href="/Administration/SitePages/List.aspx"><i class="fa fa-folder-open-o fa-fw"></i> Pages</a>
                         </li>
                     </ul>
 

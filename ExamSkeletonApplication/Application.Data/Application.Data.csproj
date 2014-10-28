@@ -55,6 +55,7 @@
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\CategorySeeder.cs" />
     <Compile Include="Migrations\GeoSeeder.cs" />
     <Compile Include="Migrations\IdentitySeeder.cs" />
     <Compile Include="Migrations\PageSeeder.cs" />

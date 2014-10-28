@@ -45,7 +45,6 @@
 
             databaseContext.Towns.AddOrUpdate(pernik);
 
-
             var berlin = new Town()
             {
                 Id = 3,

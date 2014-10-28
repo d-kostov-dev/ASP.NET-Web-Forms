@@ -21,6 +21,7 @@ namespace Application.Data.Migrations
             IdentitySeeder.Seed(context);
             PageSeeder.Seed(context);
             GeoSeeder.Seed(context);
+            CategorySeeder.Seed(context);
 
             // Just in case i forget
             context.SaveChanges();

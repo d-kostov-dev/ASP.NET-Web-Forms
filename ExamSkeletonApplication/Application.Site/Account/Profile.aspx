@@ -40,6 +40,9 @@
                                     Town: <strong><%#: Item.Town != null ? Item.Town.Name : "-" %></strong>
                                 </li>
                                 <li class="list-group-item">
+                                    Address: <strong><%#: Item.Address != null ? Item.Address : "-" %></strong>
+                                </li>
+                                <li class="list-group-item">
                                     Phone Number: <strong><%#: Item.Phone != null ? Item.Phone : "-" %></strong>
                                 </li>
                                 <li class="list-group-item">

@@ -1,27 +1,29 @@
-Search Form
-Categories
-SubCategories (recursively)
-StyleCop
-Implement Ninject
-Complete the FAQ
-Generic list page.
-Confirmation pop-up design
-Page Size Select
-Prepare View Models
-Check if file already exists
+Make Search Form
 List site pages with user controller
+Fix StyleCop Errors
+Implement Ninject
+Complete the FAQ page
+Change confirmation pop-up design
+Make dropdown select for pagination items count
+Check if file already exists
+
 Make all possible links to asp:hyperlink
 Upload image with random string name
+Public Blog
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
 *DONE* - Handle HTML in the input fields.
 *DONE* - Refactor the seeding method. Separate to different seed classes.
 *DONE* - Add Unauthorized/Access Denied Page.
-*DONE* - Use constructors instead of Page_Init. Easyer to implement Ninject later.
+*DONE* - Use constructors instead of Page_Init. Easier to implement Ninject later.
 *DONE* - Enumeration to DropdownList Helper.
 *DONE* - Random Values Generator.
 *DONE* - Block pages for given roles.
 *DONE* - Profile page.
 *DONE* - Edit profile page.
-*DONE* - Extend the standart user.
+*DONE* - Extend the standard user.
+*DONE* - Admin panel for countries.
+*DONE* - Admin panel for towns.
+*DONE* - Categories with administration and seed.
+*DONE* - Prepare at least one View Model

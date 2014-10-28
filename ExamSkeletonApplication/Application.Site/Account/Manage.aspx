@@ -88,7 +88,7 @@
                         <div class="form-group">
                             <div class="col-md-12">
                                 <asp:Button runat="server" Text="Edit" ValidationGroup="InfoData" OnClick="ChangeInfo_Click" CssClass="btn btn-block btn-primary" />
-                                <a href="/" class="btn btn-default btn-xs btn-block">Cancel</a>
+                                <a href="/Account/Profile.aspx" class="btn btn-default btn-xs btn-block">Cancel</a>
                             </div>
                         </div>
                     </fieldset>
@@ -179,7 +179,7 @@
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <asp:Button runat="server" Text="Change Password" ValidationGroup="ChangePassword" OnClick="ChangePassword_Click" CssClass="btn btn-block btn-primary" />
-                                        <a href="/" class="btn btn-default btn-xs btn-block">Cancel</a>
+                                        <a href="/Account/Profile.aspx" class="btn btn-default btn-xs btn-block">Cancel</a>
                                     </div>
                                 </div>
                             </fieldset>

@@ -12,6 +12,8 @@
 
         IRepository<Town> Towns { get; }
 
+        IRepository<Category> Categories { get; }
+
         int SaveChanges();
     }
 }

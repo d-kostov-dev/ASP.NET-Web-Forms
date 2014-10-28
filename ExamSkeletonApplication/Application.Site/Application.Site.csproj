@@ -166,11 +166,18 @@
     <Content Include="Administration\content\js\jquery-1.11.0.js" />
     <Content Include="Administration\content\js\plugins\metisMenu\metisMenu.min.js" />
     <Content Include="Administration\content\js\sb-admin-2.js" />
+    <Content Include="Administration\Categories\AddEdit.aspx" />
+    <Content Include="Administration\Categories\List.aspx" />
+    <Content Include="Administration\Countries\AddEdit.aspx" />
+    <Content Include="Administration\Countries\List.aspx" />
     <Content Include="Administration\Default.aspx" />
     <Content Include="Administration\SitePages\AddEdit.aspx" />
     <Content Include="Administration\SitePages\List.aspx" />
+    <Content Include="Administration\Towns\AddEdit.aspx" />
+    <Content Include="Administration\Towns\List.aspx" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\site.css" />
+    <Content Include="Content\flags\default.png" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\img\excuseme.jpg" />
     <Content Include="Content\img\favicon.ico" />
@@ -339,6 +346,34 @@
     <Compile Include="Administration\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Administration\Categories\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Categories\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Categories\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Categories\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Countries\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Countries\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Countries\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Countries\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Administration\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -358,6 +393,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Administration\SitePages\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Towns\AddEdit.aspx.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Towns\AddEdit.aspx.designer.cs">
+      <DependentUpon>AddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Towns\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Towns\List.aspx.designer.cs">
       <DependentUpon>List.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -406,10 +455,11 @@
     </Compile>
     <Compile Include="Utilities\BindUtil.cs" />
     <Compile Include="Utilities\ValuesGenerator.cs" />
+    <Compile Include="ViewModels\TownViewModel.cs" />
+    <Compile Include="ViewModels\CountryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application.Common\Application.Common.csproj">

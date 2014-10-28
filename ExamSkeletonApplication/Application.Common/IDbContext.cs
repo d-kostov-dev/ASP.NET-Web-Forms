@@ -13,6 +13,8 @@
 
         IDbSet<Town> Towns { get; set; }
 
+        IDbSet<Category> Categories { get; set; }
+
         int SaveChanges();
 
         IDbSet<TEntity> Set<TEntity>() where TEntity : class;

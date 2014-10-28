@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Enumerations\RelationshipStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
