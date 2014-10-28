@@ -1,0 +1,8 @@
+Request.Params["itemId"]
+Convert.ToInt32(Request.Params["itemId"]);
+
+using Microsoft.AspNet.Identity;
+User.Identity.GetUserId();
+
+// Enables .Include in LINQ
+using System.Data.Entity;

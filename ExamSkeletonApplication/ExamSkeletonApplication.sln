@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Site", "Application.Site\Application.Site.csproj", "{DF7F8111-E1F2-4442-8BB2-335C53F64608}"
 EndProject
@@ -15,6 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Common", "Appli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDo", "ToDo", "{3D7507F2-EDE6-4026-BBB3-883E163D8074}"
 	ProjectSection(SolutionItems) = preProject
+		FastCode.txt = FastCode.txt
 		ToDoList.txt = ToDoList.txt
 	EndProjectSection
 EndProject

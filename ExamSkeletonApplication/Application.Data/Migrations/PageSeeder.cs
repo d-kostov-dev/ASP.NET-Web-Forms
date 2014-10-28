@@ -43,7 +43,7 @@
 		                                </a>
                                         <a class='list-group-item'>
 			                                <h4 class='list-group-item-heading'>Is there any data seeding?</h4>
-			                                <p class='list-group-item-text'>Yes I'm seeding Roles, Users and Pages in the Migration.Configuration file.</p>
+			                                <p class='list-group-item-text'>Yes I'm seeding data in the Migration.Configuration file.</p>
 		                                </a>
                                         <a class='list-group-item'>
 			                                <h4 class='list-group-item-heading'>What are the Site Pages?</h4>

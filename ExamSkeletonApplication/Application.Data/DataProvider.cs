@@ -32,6 +32,16 @@
         {
             get { return this.GetRepository<SitePage>(); }
         }
+
+        public IRepository<Country> Countries
+        {
+            get { return this.GetRepository<Country>(); }
+        }
+
+        public IRepository<Town> Towns
+        {
+            get { return this.GetRepository<Town>(); }
+        }
        
         public int SaveChanges()
         {

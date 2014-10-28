@@ -20,7 +20,9 @@ namespace Application.Data.Migrations
         {
             IdentitySeeder.Seed(context);
             PageSeeder.Seed(context);
+            GeoSeeder.Seed(context);
 
+            // Just in case i forget
             context.SaveChanges();
         }
     }

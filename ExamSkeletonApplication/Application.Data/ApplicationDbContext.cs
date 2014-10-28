@@ -18,6 +18,10 @@
 
         public virtual IDbSet<SitePage> SitePages { get; set; }
 
+        public IDbSet<Country> Countries { get; set; }
+
+        public IDbSet<Town> Towns { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

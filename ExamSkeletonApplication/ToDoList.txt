@@ -1,24 +1,17 @@
-User with more properties. (age, photo etc.)
 Search Form
 Categories
 SubCategories (recursively)
-Prepare the using for .Include - Linq
-Prepare the usings for get user id (or make it a userIdProvider)
-Prepare enumerations to list func
 StyleCop
 Implement Ninject
 Complete the FAQ
-Try to make a generic list page and inherit it.
+Generic list page.
 Confirmation pop-up design
 Page Size Select
 Prepare View Models
 Check if file already exists
-Block pages for given roles
 List site pages with user controller
-Attach other models to the user
 Make all possible links to asp:hyperlink
-Upload image with random string name (radnom stuff generator class)
-Make profile page and edit profile page.
+Upload image with random string name
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
@@ -26,3 +19,9 @@ Make profile page and edit profile page.
 *DONE* - Refactor the seeding method. Separate to different seed classes.
 *DONE* - Add Unauthorized/Access Denied Page.
 *DONE* - Use constructors instead of Page_Init. Easyer to implement Ninject later.
+*DONE* - Enumeration to DropdownList Helper.
+*DONE* - Random Values Generator.
+*DONE* - Block pages for given roles.
+*DONE* - Profile page.
+*DONE* - Edit profile page.
+*DONE* - Extend the standart user.

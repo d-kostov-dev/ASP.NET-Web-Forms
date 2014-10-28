@@ -6,11 +6,17 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
+using Application.Data;
+using Application.Models.Enumerations;
+using Application.Site.Utilities;
+using System.IO;
 
 namespace Application.Site.Account
 {
     public partial class Manage : System.Web.UI.Page
     {
+        private DataProvider data;
+
         protected string SuccessMessage
         {
             get;
@@ -30,8 +36,16 @@ namespace Application.Site.Account
 
         protected void Page_Load()
         {
+            this.data = new DataProvider();
+
             if (!IsPostBack)
             {
+                this.Country.DataSource = data.Countries.All().ToList();
+                this.Country.SelectedIndex = 0;
+                this.Town.DataSource = data.Countries.All().ToList()[0].Towns.ToList();
+                BindUtil.EnumToList<RelationshipStatus>(this.Status);
+                this.DataBind();
+
                 // Determine the sections to render
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 if (HasPassword(manager))
@@ -43,10 +57,12 @@ namespace Application.Site.Account
                     setPassword.Visible = true;
                     changePasswordHolder.Visible = false;
                 }
+
                 CanRemoveExternalLogins = manager.GetLogins(User.Identity.GetUserId()).Count() > 1;
 
                 // Render success message
                 var message = Request.QueryString["m"];
+
                 if (message != null)
                 {
                     // Strip the query string from action
@@ -59,6 +75,24 @@ namespace Application.Site.Account
                         : String.Empty;
                     successMessage.Visible = !String.IsNullOrEmpty(SuccessMessage);
                 }
+
+                // User Info Form Populate
+                var currentUser = manager.FindById(User.Identity.GetUserId());
+
+                this.FirstName.Text = currentUser.FirstName;
+                this.LastName.Text = currentUser.LastName;
+
+                if(currentUser.Town != null){
+                    this.Country.SelectedValue = currentUser.Town != null ? currentUser.Town.Country.Id.ToString() : "";
+
+                    this.Town.DataSource = data.Countries.Find(currentUser.Town.Country.Id).Towns.ToList();
+                    this.Town.DataBind();
+                    this.Town.SelectedValue = currentUser.Town.Id.ToString();
+                }
+
+                this.Address.Text = currentUser.Address;
+                this.Phone.Text = currentUser.Phone;
+                this.Status.SelectedValue = ((int)currentUser.RelationshipStatus).ToString();
             }
         }
 
@@ -78,6 +112,31 @@ namespace Application.Site.Account
                 {
                     AddErrors(result);
                 }
+            }
+        }
+
+        protected void ChangeInfo_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                var user = data.Users.Find(User.Identity.GetUserId());
+                user.FirstName = this.FirstName.Text;
+                user.LastName = this.LastName.Text;
+                user.Town = data.Towns.Find(int.Parse(this.Town.SelectedValue));
+                user.Phone = this.Phone.Text;
+                user.Address = this.Address.Text;
+                user.RelationshipStatus = (RelationshipStatus)int.Parse(this.Status.SelectedValue);
+
+                if (this.Photo.HasFile)
+                {
+                    string filename = Path.GetFileName(this.Photo.FileName);
+                    this.Photo.SaveAs(Server.MapPath("~/Content/userImages/") + filename);
+                    user.Photo = filename;
+                }
+
+                this.data.SaveChanges();
+
+                Response.Redirect("Profile.aspx");
             }
         }
 
@@ -127,6 +186,13 @@ namespace Application.Site.Account
             {
                 ModelState.AddModelError("", error);
             }
+        }
+
+        protected void Country_Change(object sender, EventArgs e)
+        {
+            var selectedIdem = int.Parse(this.Country.SelectedValue);
+            this.Town.DataSource = data.Towns.All().Where(x => x.Country.Id == selectedIdem).ToList();
+            this.Town.DataBind();
         }
     }
 }
