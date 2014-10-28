@@ -1,9 +1,15 @@
 ﻿<%@ Page Title="Countries List" Language="C#" MasterPageFile="~/Administration/Admin.Master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="Application.Site.Administration.Countries.List" %>
 
+<%@ Register Src="~/Controls/ItemsPerPage/ItemsPerPage.ascx" TagPrefix="UserControl" TagName="ItemsPerPage" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminContent" runat="server">
     <h3>Countries List</h3>
     <a href="AddEdit.aspx" class="btn btn-primary" role="button">Add New</a>
     <hr />
+
+    <UserControl:ItemsPerPage runat="server" id="ItemsPerPage" controlId="ItemsList"  pagerId="ItemsPager" />
+
     <asp:ListView 
         ID="ItemsList"
         ItemPlaceholderID="ItemPlace"

@@ -1,17 +1,22 @@
 ﻿<%@ Page Title="Categories List" Language="C#" MasterPageFile="~/Administration/Admin.Master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="Application.Site.Administration.Categories.List" %>
 
+<%@ Register Src="~/Controls/ItemsPerPage/ItemsPerPage.ascx" TagPrefix="UserControl" TagName="ItemsPerPage" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="AdminContent" runat="server">
     <h3>Categories List</h3>
     <a href="AddEdit.aspx" class="btn btn-primary" role="button">Add New</a>
     <hr />
 
-    <label for="ItemsCountSelect" class="control-label">Items per page:</label>
+    <%--<label for="ItemsCountSelect" class="control-label">Items per page:</label>
     <asp:DropDownList ID="ItemsCountSelect" runat="server" onselectedindexchanged="ChangeItems_PerPage" AutoPostBack="true">
         <asp:ListItem Value="1">1</asp:ListItem>
         <asp:ListItem Value="2">2</asp:ListItem>
         <asp:ListItem Value="3">3</asp:ListItem>
         <asp:ListItem Value="4">4</asp:ListItem>
-    </asp:DropDownList>
+    </asp:DropDownList>--%>
+
+    <UserControl:ItemsPerPage runat="server" id="ItemsPerPage" controlId="ItemsList"  pagerId="ItemsPager" />
 
     <asp:ListView
         ID="ItemsList"

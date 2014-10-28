@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Application.Site.Administration.Countries {
+namespace Application.Site.Controls.ItemsPerPage {
     
     
-    public partial class List {
+    public partial class ItemsPerPAge {
         
         /// <summary>
-        /// ItemsPerPage control.
+        /// ItemsCountSelect control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Application.Site.Controls.ItemsPerPage.ItemsPerPAge ItemsPerPage;
-        
-        /// <summary>
-        /// ItemsList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ItemsList;
+        protected global::System.Web.UI.WebControls.DropDownList ItemsCountSelect;
     }
 }

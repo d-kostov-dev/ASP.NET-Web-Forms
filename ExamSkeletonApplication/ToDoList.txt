@@ -1,21 +1,13 @@
-Make Search Form
-Fix StyleCop Errors
-Implement Ninject
-Complete the FAQ page
-Change confirmation pop-up design
-Check if file already exists
-Make all possible links to asp:hyperlink
-Upload image with random string name
+Implement Ninject - I wish but no time for that! :(
+Fix StyleCop Errors in Application.Site
 Breadcump in admin
-Like User Control
-Items Per page control
+Items per page user control
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
 *DONE* - Handle HTML in the input fields.
 *DONE* - Refactor the seeding method. Separate to different seed classes.
 *DONE* - Add Unauthorized/Access Denied Page.
-*DONE* - Use constructors instead of Page_Init. Easier to implement Ninject later.
 *DONE* - Enumeration to DropdownList Helper.
 *DONE* - Random Values Generator.
 *DONE* - Block pages for given roles.

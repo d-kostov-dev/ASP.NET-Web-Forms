@@ -186,6 +186,7 @@
     <Content Include="Controls\ErrorSuccessNotifier\Scripts\ErrorSuccessNotifier.js" />
     <Content Include="Controls\ErrorSuccessNotifier\Scripts\jquery-1.3.2.js" />
     <Content Include="Controls\FooterPages\FooterPages.ascx" />
+    <Content Include="Controls\ItemsPerPage\ItemsPerPage.ascx" />
     <Content Include="packages.config" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -427,6 +428,13 @@
     </Compile>
     <Compile Include="Controls\FooterPages\FooterPages.ascx.designer.cs">
       <DependentUpon>FooterPages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ItemsPerPage\ItemsPerPage.ascx.cs">
+      <DependentUpon>ItemsPerPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ItemsPerPage\ItemsPerPage.ascx.designer.cs">
+      <DependentUpon>ItemsPerPage.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

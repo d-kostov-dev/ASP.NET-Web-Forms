@@ -1,8 +1,9 @@
 Request.Params["itemId"]
+
 Convert.ToInt32(Request.Params["itemId"]);
 
 using Microsoft.AspNet.Identity;
 User.Identity.GetUserId();
 
-// Enables .Include in LINQ
+// Enables .Include in LINQ - no need to use MARS (MultipleActiveResultSets=True)
 using System.Data.Entity;
