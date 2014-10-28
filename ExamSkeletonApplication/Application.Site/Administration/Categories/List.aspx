@@ -16,7 +16,7 @@
         <asp:ListItem Value="4">4</asp:ListItem>
     </asp:DropDownList>--%>
 
-    <UserControl:ItemsPerPage runat="server" id="ItemsPerPage" controlId="ItemsList"  pagerId="ItemsPager" />
+    <UserControl:ItemsPerPage runat="server" id="ItemsPerPage" controlId="ItemsList"  pagerId="ItemsPager" StartValue="1"/>
 
     <asp:ListView
         ID="ItemsList"

@@ -48,6 +48,7 @@
         {
             DataPager pager = (DataPager)this.Parent.FindControl(this.ControlId).FindControl(this.PagerId);
             pager.PageSize = int.Parse(this.ItemsCountSelect.SelectedValue);
+            pager.SetPageProperties(0, pager.PageSize, true);
             pager.Visible = pager.PageSize < pager.TotalRowCount;
         }
     }
