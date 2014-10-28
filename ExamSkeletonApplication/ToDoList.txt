@@ -3,12 +3,12 @@ Fix StyleCop Errors
 Implement Ninject
 Complete the FAQ page
 Change confirmation pop-up design
-Make dropdown select for pagination items count
 Check if file already exists
 Make all possible links to asp:hyperlink
 Upload image with random string name
 Breadcump in admin
 Like User Control
+Items Per page control
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
@@ -28,3 +28,4 @@ Like User Control
 *DONE* - Prepare at least one View Model
 *DONE* - List footer pages using user control.
 *DONE* - Add validation attributes in models.
+*DONE* - Make dropdown select for selecting number of items per page.

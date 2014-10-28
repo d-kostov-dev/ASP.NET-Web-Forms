@@ -4,7 +4,16 @@
     <h3>Categories List</h3>
     <a href="AddEdit.aspx" class="btn btn-primary" role="button">Add New</a>
     <hr />
-    <asp:ListView 
+
+    <label for="ItemsCountSelect" class="control-label">Items per page:</label>
+    <asp:DropDownList ID="ItemsCountSelect" runat="server" onselectedindexchanged="ChangeItems_PerPage" AutoPostBack="true">
+        <asp:ListItem Value="1">1</asp:ListItem>
+        <asp:ListItem Value="2">2</asp:ListItem>
+        <asp:ListItem Value="3">3</asp:ListItem>
+        <asp:ListItem Value="4">4</asp:ListItem>
+    </asp:DropDownList>
+
+    <asp:ListView
         ID="ItemsList"
         ItemPlaceholderID="ItemPlace"
         runat="server"
@@ -27,29 +36,29 @@
             </table>
 
             <div class="row">
-                <asp:DataPager 
-                    ID="ItemsPager" 
-                    runat="server" 
+                <asp:DataPager
+                    ID="ItemsPager"
+                    runat="server"
                     PagedControlID="ItemsList"
-                    PageSize="5"
+                    PageSize='1'
                     class="btn-group">
 
                     <Fields>
-                        <asp:NextPreviousPagerField 
+                        <asp:NextPreviousPagerField
                             ShowFirstPageButton="true"
-                            ShowNextPageButton="false" 
-                            ShowPreviousPageButton="false" 
-                            ButtonCssClass="btn btn-primary"/>
+                            ShowNextPageButton="false"
+                            ShowPreviousPageButton="false"
+                            ButtonCssClass="btn btn-primary" />
 
-                        <asp:NumericPagerField 
+                        <asp:NumericPagerField
                             CurrentPageLabelCssClass="btn btn-default"
-                            NumericButtonCssClass="btn btn-primary"/>
+                            NumericButtonCssClass="btn btn-primary" />
 
-                        <asp:NextPreviousPagerField 
+                        <asp:NextPreviousPagerField
                             ShowLastPageButton="true"
-                            ShowNextPageButton="false" 
-                            ShowPreviousPageButton="false" 
-                            ButtonCssClass="btn btn-primary"/>
+                            ShowNextPageButton="false"
+                            ShowPreviousPageButton="false"
+                            ButtonCssClass="btn btn-primary" />
                     </Fields>
                 </asp:DataPager>
             </div>
@@ -57,27 +66,27 @@
 
         <ItemTemplate>
             <tr runat="server">
-            <td>
-                <%#: Item.Id %>
-            </td>
-            <td>
-                <%#: Item.Name %>
-            </td>
-            <td>
-                <a class="btn btn-primary btn-sm" href="AddEdit.aspx?itemId=<%#: Item.Id %>">Edit</a>
-            </td>
-            <td>
-                <asp:LinkButton 
-                    ID="deleteItem" 
-                    runat="server" 
-                    class="btn btn-danger btn-sm"
-                    CommandName="Delete"
-                    OnCommand="Delete_Item"
-                    CommandArgument="<%# Item.Id %>"
-                    OnClientClick = "return confirm('Are you sure you want to delete this item?');"
-                    Text="Delete" />
-            </td>
+                <td>
+                    <%#: Item.Id %>
+                </td>
+                <td>
+                    <%#: Item.Name %>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="AddEdit.aspx?itemId=<%#: Item.Id %>">Edit</a>
+                </td>
+                <td>
+                    <asp:LinkButton
+                        ID="deleteItem"
+                        runat="server"
+                        class="btn btn-danger btn-sm"
+                        CommandName="Delete"
+                        OnCommand="Delete_Item"
+                        CommandArgument="<%# Item.Id %>"
+                        OnClientClick="return confirm('Are you sure you want to delete this item?');"
+                        Text="Delete" />
+                </td>
             </tr>
         </ItemTemplate>
-    </asp:ListView>     
+    </asp:ListView>
 </asp:Content>

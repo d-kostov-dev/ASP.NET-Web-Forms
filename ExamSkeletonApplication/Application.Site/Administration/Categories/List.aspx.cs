@@ -25,6 +25,7 @@ namespace Application.Site.Administration.Categories
         protected void Page_Init(object sender, EventArgs e)
         {
             data = new DataProvider();
+            this.ItemsCountSelect.SelectedValue = "5";
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
@@ -52,6 +53,13 @@ namespace Application.Site.Administration.Categories
         private void ShowPager()
         {
             DataPager pager = (DataPager)ItemsList.FindControl("ItemsPager");
+            pager.Visible = (pager.PageSize < pager.TotalRowCount);
+        }
+
+        protected void ChangeItems_PerPage(object sender, EventArgs e)
+        {
+            DataPager pager = (DataPager)ItemsList.FindControl("ItemsPager");
+            pager.PageSize = int.Parse(this.ItemsCountSelect.SelectedValue);
             pager.Visible = (pager.PageSize < pager.TotalRowCount);
         }
     }
