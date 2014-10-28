@@ -10,6 +10,7 @@ using Application.Data;
 using Application.Models.Enumerations;
 using Application.Site.Utilities;
 using System.IO;
+using ErrorHandlerControl;
 
 namespace Application.Site.Account
 {
@@ -134,9 +135,17 @@ namespace Application.Site.Account
                     user.Photo = filename;
                 }
 
-                this.data.SaveChanges();
-
-                Response.Redirect("Profile.aspx");
+                try
+                {
+                    this.data.SaveChanges();
+                    ErrorSuccessNotifier.AddSuccessMessage("Profile Edited Successfully");
+                    ErrorSuccessNotifier.ShowAfterRedirect = true;
+                    Response.Redirect("Profile.aspx", false);
+                }
+                catch (Exception ex)
+                {
+                    ErrorSuccessNotifier.AddErrorMessage(ex);
+                }
             }
         }
 
