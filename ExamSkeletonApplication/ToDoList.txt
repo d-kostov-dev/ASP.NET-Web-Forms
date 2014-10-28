@@ -1,15 +1,16 @@
+Add property attributes in models
 Make Search Form
-List site pages with user controller
+
 Fix StyleCop Errors
 Implement Ninject
 Complete the FAQ page
 Change confirmation pop-up design
 Make dropdown select for pagination items count
 Check if file already exists
-
 Make all possible links to asp:hyperlink
 Upload image with random string name
 Public Blog
+Like blog page control
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
@@ -27,3 +28,4 @@ Public Blog
 *DONE* - Admin panel for towns.
 *DONE* - Categories with administration and seed.
 *DONE* - Prepare at least one View Model
+*DONE* - List footer pages using user control.

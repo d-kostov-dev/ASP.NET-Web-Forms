@@ -9,6 +9,9 @@
     TagPrefix="errorHandlerControl"
     TagName="ErrorSuccessNotifier" %>
 
+<%@ Register Src="~/Controls/FooterPages/FooterPages.ascx" TagPrefix="pagesControl" TagName="FooterPages" %>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -95,14 +98,7 @@
                         <p class="text-muted text-center">Made By <a href="#">Pesho Dev International</a> | Powered By <a href="http://www.asp.net/web-forms">ASP.NET Web Forms</a> </p>
                     </div>
                     <div class="col-md-6">
-                        <asp:Repeater
-                            ID="PagesList"
-                            runat="server"
-                            ItemType="Application.Models.SitePage">
-                            <ItemTemplate>
-                                <a href="/ShowPage.aspx?pageId=<%#: Item.Id %>"><%#: Item.Title %></a>&nbsp;&nbsp;
-                            </ItemTemplate>
-                        </asp:Repeater>
+                        <pagesControl:FooterPages runat="server" id="FooterPages" />
                     </div>
                 </div>
             </div>

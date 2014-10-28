@@ -31,12 +31,12 @@ namespace Application.Site {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
         
         /// <summary>
-        /// PagesList control.
+        /// FooterPages control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater PagesList;
+        protected global::Application.Site.Controls.FooterPages.FooterPages FooterPages;
     }
 }
