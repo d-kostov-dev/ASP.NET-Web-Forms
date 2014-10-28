@@ -1,22 +1,21 @@
-﻿using Application.Data;
-using Application.Site.ViewModels;
-using ErrorHandlerControl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site.Administration.Towns
+﻿namespace Application.Site.Administration.Towns
 {
+    using System;
+    using System.Linq;
+    using System.Web.UI.WebControls;
+
+    using Application.Data;
+    using Application.Site.ViewModels;
+
+    using ErrorHandlerControl;
+    
     public partial class List : System.Web.UI.Page
     {
         private DataProvider data;
 
         public IQueryable<TownViewModel> GetItems()
         {
-            return data.Towns
+            return this.data.Towns
                 .All()
                 .OrderBy(x => x.Id)
                 .Select(TownViewModel.ViewModel); // This is not required but i want to be able to sort by child property
@@ -24,24 +23,24 @@ namespace Application.Site.Administration.Towns
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            data = new DataProvider();
+            this.data = new DataProvider();
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
             if (this.GetItems().Count() > 0)
             {
-                ShowPager();
+                this.ShowPager();
             }
         }
 
         protected void Delete_Item(object sender, CommandEventArgs e)
         {
             var itemId = int.Parse(e.CommandArgument.ToString());
-            var item = data.Towns.Find(itemId);
+            var item = this.data.Towns.Find(itemId);
 
-            data.Towns.Delete(item);
-            data.SaveChanges();
+            this.data.Towns.Delete(item);
+            this.data.SaveChanges();
 
             ErrorSuccessNotifier.AddSuccessMessage("Item Deleted Successfully");
             ErrorSuccessNotifier.ShowAfterRedirect = true;
@@ -51,8 +50,8 @@ namespace Application.Site.Administration.Towns
 
         private void ShowPager()
         {
-            DataPager pager = (DataPager)ItemsList.FindControl("ItemsPager");
-            pager.Visible = (pager.PageSize < pager.TotalRowCount);
+            DataPager pager = (DataPager)this.ItemsList.FindControl("ItemsPager");
+            pager.Visible = pager.PageSize < pager.TotalRowCount;
         }
     }
 }

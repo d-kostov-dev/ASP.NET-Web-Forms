@@ -7,6 +7,7 @@
 
     using Application.Data;
     using Application.Models;
+
     using ErrorHandlerControl;
 
     public partial class List : Page
@@ -15,21 +16,21 @@
 
         public List()
         {
-            data = new DataProvider();
+            this.data = new DataProvider();
         }
 
         public IQueryable<SitePage> GetItems()
         {
-            return data.SitePages.All().OrderBy(x => x.Id);
+            return this.data.SitePages.All().OrderBy(x => x.Id);
         }
 
         protected void Delete_Item(object sender, CommandEventArgs e)
         {
             var itemId = int.Parse(e.CommandArgument.ToString());
-            var item = data.SitePages.Find(itemId);
+            var item = this.data.SitePages.Find(itemId);
 
-            data.SitePages.Delete(item);
-            data.SaveChanges();
+            this.data.SitePages.Delete(item);
+            this.data.SaveChanges();
 
             ErrorSuccessNotifier.AddSuccessMessage("Item Deleted Successfully");
             ErrorSuccessNotifier.ShowAfterRedirect = true;
@@ -41,14 +42,14 @@
         {
             if (this.GetItems().Count() > 0)
             {
-                ShowPager();
+                this.ShowPager();
             }
         }
 
         private void ShowPager()
         {
-            DataPager pager = (DataPager)ItemsList.FindControl("ItemsPager");
-            pager.Visible = (pager.PageSize < pager.TotalRowCount);
+            DataPager pager = (DataPager)this.ItemsList.FindControl("ItemsPager");
+            pager.Visible = pager.PageSize < pager.TotalRowCount;
         }
     }
 }

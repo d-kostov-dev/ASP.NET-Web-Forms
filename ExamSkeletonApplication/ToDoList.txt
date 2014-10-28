@@ -1,7 +1,6 @@
 Implement Ninject - I wish but no time for that! :(
 Fix StyleCop Errors in Application.Site
-Breadcump in admin
-Items per page user control
+Breadcumb in admin
 
 *DONE* - Public part global error handling.
 *DONE* - Don't show pagination when items less than one page.
@@ -21,3 +20,4 @@ Items per page user control
 *DONE* - List footer pages using user control.
 *DONE* - Add validation attributes in models.
 *DONE* - Make dropdown select for selecting number of items per page.
+*DONE* - Items per page selection in user control.

@@ -1,15 +1,13 @@
-﻿using Application.Data;
-using Application.Models;
-using ErrorHandlerControl;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site.Administration.Towns
+﻿namespace Application.Site.Administration.Towns
 {
+    using System;
+    using System.Linq;
+
+    using Application.Data;
+    using Application.Models;
+
+    using ErrorHandlerControl;
+   
     public partial class AddEdit : System.Web.UI.Page
     {
         private bool isNewItem = false;
@@ -18,43 +16,43 @@ namespace Application.Site.Administration.Towns
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            data = new DataProvider();
+            this.data = new DataProvider();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             this.itemId = Convert.ToInt32(Request.Params["itemId"]);
-            isNewItem = (this.itemId == 0);
+            this.isNewItem = this.itemId == 0;
 
-            if (!Page.IsPostBack)
+            if (!this.Page.IsPostBack)
             {
-                this.Country.DataSource = data.Countries.All().ToList();
+                this.Country.DataSource = this.data.Countries.All().ToList();
                 this.Country.SelectedIndex = 0;
             }
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
+            if (this.Page.IsValid)
             {
                 Town item;
 
-                if (isNewItem)
+                if (this.isNewItem)
                 {
                     item = new Town();
-                    data.Towns.Add(item);
+                    this.data.Towns.Add(item);
                 }
                 else
                 {
-                    item = data.Towns.Find(this.itemId);
+                    item = this.data.Towns.Find(this.itemId);
                 }
 
                 item.Name = this.Name.Text;
-                item.Country = data.Countries.Find(int.Parse(this.Country.SelectedValue));
+                item.Country = this.data.Countries.Find(int.Parse(this.Country.SelectedValue));
 
                 try
                 {
-                    data.SaveChanges();
+                    this.data.SaveChanges();
 
                     ErrorSuccessNotifier.AddSuccessMessage("Item Added Successfully");
                     ErrorSuccessNotifier.ShowAfterRedirect = true;
@@ -65,7 +63,6 @@ namespace Application.Site.Administration.Towns
                 {
                     ErrorSuccessNotifier.AddErrorMessage(ex);
                 }
-
             }
         }
 
@@ -73,9 +70,9 @@ namespace Application.Site.Administration.Towns
         {
             this.DataBind();
 
-            if (!isNewItem)
+            if (!this.isNewItem)
             {
-                Town item = data.Towns.Find(itemId);
+                Town item = this.data.Towns.Find(this.itemId);
 
                 this.Name.Text = item.Name;
                 this.Country.SelectedValue = item.Country.Id.ToString();

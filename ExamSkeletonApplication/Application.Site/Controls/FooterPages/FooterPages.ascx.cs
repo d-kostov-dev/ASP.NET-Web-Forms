@@ -1,13 +1,10 @@
-﻿using Application.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site.Controls.FooterPages
+﻿namespace Application.Site.Controls.FooterPages
 {
+    using System;
+    using System.Linq;
+
+    using Application.Data;
+    
     public partial class FooterPages : System.Web.UI.UserControl
     {
         private DataProvider data;

@@ -1,12 +1,10 @@
-﻿using Application.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Web;
-
-namespace Application.Site.ViewModels
+﻿namespace Application.Site.ViewModels
 {
+    using System;
+    using System.Linq.Expressions;
+
+    using Application.Models;
+    
     public class TownViewModel
     {
         public static Expression<Func<Town, TownViewModel>> ViewModel

@@ -1,16 +1,13 @@
-﻿using Application.Data;
-using Application.Models;
-using ErrorHandlerControl;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site.Administration.Categories
+﻿namespace Application.Site.Administration.Categories
 {
+    using System;
+    using System.Web.UI;
+
+    using Application.Data;
+    using Application.Models;
+
+    using ErrorHandlerControl;
+    
     public partial class AddEdit : System.Web.UI.Page
     {
         private bool isNewItem = false;
@@ -19,13 +16,13 @@ namespace Application.Site.Administration.Categories
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            data = new DataProvider();
+            this.data = new DataProvider();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             this.itemId = Convert.ToInt32(Request.Params["itemId"]);
-            isNewItem = (this.itemId == 0);
+            this.isNewItem = this.itemId == 0;
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
@@ -34,21 +31,21 @@ namespace Application.Site.Administration.Categories
             {
                 Category item;
 
-                if (isNewItem)
+                if (this.isNewItem)
                 {
                     item = new Category();
-                    data.Categories.Add(item);
+                    this.data.Categories.Add(item);
                 }
                 else
                 {
-                    item = data.Categories.Find(this.itemId);
+                    item = this.data.Categories.Find(this.itemId);
                 }
 
                 item.Name = this.Name.Text;
 
                 try
                 {
-                    data.SaveChanges();
+                    this.data.SaveChanges();
 
                     ErrorSuccessNotifier.AddSuccessMessage("Item Added Successfully");
                     ErrorSuccessNotifier.ShowAfterRedirect = true;
@@ -66,9 +63,9 @@ namespace Application.Site.Administration.Categories
         {
             this.DataBind();
 
-            if (!isNewItem)
+            if (!this.isNewItem)
             {
-                Category item = data.Categories.Find(itemId);
+                Category item = this.data.Categories.Find(this.itemId);
 
                 this.Name.Text = item.Name;
             }

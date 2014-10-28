@@ -1,13 +1,10 @@
-﻿using Application.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site
+﻿namespace Application.Site
 {
+    using System;
+    using System.Web.UI;
+
+    using Application.Data;
+
     public partial class ShowPage : System.Web.UI.Page
     {
         private DataProvider data;

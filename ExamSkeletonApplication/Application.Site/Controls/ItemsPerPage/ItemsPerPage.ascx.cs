@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace Application.Site.Controls.ItemsPerPage
+﻿namespace Application.Site.Controls.ItemsPerPage
 {
+    using System;
+    using System.Web.UI.WebControls;
+
     public partial class ItemsPerPAge : System.Web.UI.UserControl
     {
         public ItemsPerPAge()
@@ -30,16 +26,16 @@ namespace Application.Site.Controls.ItemsPerPage
         {
             if (!this.Page.IsPostBack)
             {
-                RenderSelector();
+                this.RenderSelector();
                 DataPager pager = (DataPager)this.Parent.FindControl(this.ControlId).FindControl(this.PagerId);
                 pager.PageSize = this.StartValue;
-                this.ItemsCountSelect.SelectedValue = StartValue.ToString();
+                this.ItemsCountSelect.SelectedValue = this.StartValue.ToString();
             }
         }
 
         protected void RenderSelector()
         {
-            this.ItemsCountSelect.Items.Add(new ListItem(StartValue.ToString(), StartValue.ToString()));
+            this.ItemsCountSelect.Items.Add(new ListItem(this.StartValue.ToString(), this.StartValue.ToString()));
 
             for (int i = 1; i < this.OptionsCount; i++)
             {
@@ -52,7 +48,7 @@ namespace Application.Site.Controls.ItemsPerPage
         {
             DataPager pager = (DataPager)this.Parent.FindControl(this.ControlId).FindControl(this.PagerId);
             pager.PageSize = int.Parse(this.ItemsCountSelect.SelectedValue);
-            pager.Visible = (pager.PageSize < pager.TotalRowCount);
+            pager.Visible = pager.PageSize < pager.TotalRowCount;
         }
     }
 }

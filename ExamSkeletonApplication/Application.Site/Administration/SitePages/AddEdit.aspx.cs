@@ -16,29 +16,29 @@
 
         public AddEdit()
         {
-            data = new DataProvider();
+            this.data = new DataProvider();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             this.itemId = Convert.ToInt32(Request.Params["itemId"]);
-            isNewItem = (this.itemId == 0);
+            this.isNewItem = this.itemId == 0;
         }
 
         protected void ButtonSubmit_Click(object sender, EventArgs e)
         {
-            if (Page.IsValid)
+            if (this.Page.IsValid)
             {
                 SitePage item;
 
-                if (isNewItem)
+                if (this.isNewItem)
                 {
                     item = new SitePage();
-                    data.SitePages.Add(item);
+                    this.data.SitePages.Add(item);
                 }
                 else
                 {
-                    item = data.SitePages.Find(this.itemId);
+                    item = this.data.SitePages.Find(this.itemId);
                 }
 
                 item.Title = this.PageTitle.Text;
@@ -47,7 +47,7 @@
 
                 try
                 {
-                    data.SaveChanges();
+                    this.data.SaveChanges();
                     ErrorSuccessNotifier.AddSuccessMessage("Item Added Successfully");
                     ErrorSuccessNotifier.ShowAfterRedirect = true;
                     Response.Redirect("List.aspx", false);
@@ -56,15 +56,14 @@
                 {
                     ErrorSuccessNotifier.AddErrorMessage(ex);
                 }
-
             }
         }
 
         protected void Page_PreRender(object sender, EventArgs e)
         {
-            if (!isNewItem)
+            if (!this.isNewItem)
             {
-                SitePage item = data.SitePages.Find(itemId);
+                SitePage item = this.data.SitePages.Find(this.itemId);
 
                 this.PageTitle.Text = item.Title;
                 this.Content.Text = item.Content;
